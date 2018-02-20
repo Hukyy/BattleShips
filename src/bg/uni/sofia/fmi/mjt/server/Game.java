@@ -6,16 +6,10 @@ import bg.uni.sofia.fmi.mjt.battleships.Coordinates;
 import java.io.Serializable;
 
 public class Game {
-    //    private String name;
-//    private String creator;
-//
-//    private Board firstBoard;
-//    private Board secondBoard;
-//    private boolean start;
     private GameState state;
-    transient private Player player1;
-    transient private Player player2;
-    transient private Player currentPlayer;
+    private Player player1;
+    private Player player2;
+    private Player currentPlayer;
 
 
     public Game(String name) {
@@ -29,60 +23,6 @@ public class Game {
     public void setState(GameState state) {
         this.state = state;
     }
-
-//    public String getName() {
-//        return name;
-//    }
-//
-//    public void setName(String name) {
-//        this.name = name;
-//    }
-//
-//    public void setFirstPlayer(Player player){
-//        player1 = player;
-//        currentPlayer = player;
-//    }
-//
-//    public void setSecondPlayer(Player player){
-//        player2 = player;
-//    }
-//
-//    public void setFirstBoard(Board board){
-//        this.firstBoard = board;
-//    }
-//
-//    public void setSecondBoard(Board board){
-//        this.secondBoard = board;
-//    }
-//
-//    public String getCreator() {
-//        return creator;
-//    }
-//
-//    public void setCreator(String creator) {
-//        this.creator = creator;
-//    }
-//
-//    public boolean isStart() {
-//        return start;
-//    }
-//
-//    public void setStart(boolean hasStart) {
-//        this.start = hasStart;
-//    }
-//
-
-//
-
-//
-//    public Board getFirstBoard() {
-//        return firstBoard;
-//    }
-//
-//    public Board getSecondBoard() {
-//        return secondBoard;
-//    }
-//
 
 
     public synchronized boolean validMove(Player player, String target) {
@@ -132,7 +72,6 @@ public class Game {
 
     public void setPlayer1(Player player1) {
         this.player1 = player1;
-//        this.state.setPlayerOneName(player1.getNickname());
     }
 
 

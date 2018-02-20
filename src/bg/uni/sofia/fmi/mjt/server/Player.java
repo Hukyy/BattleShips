@@ -82,6 +82,7 @@ public class Player implements Runnable {
                     String name = null;
                     if (parts.length == 1) {
                         dos.writeUTF("You can't create a game without a name");
+                        continue;
                     }
                     name = parts[1];
                     createNewGame(name);
@@ -107,6 +108,7 @@ public class Player implements Runnable {
                     String[] splitted = command.split("\\s+");
                     if (splitted.length != 2) {
                         dos.writeUTF("Please choose which game you want to load");
+                        continue;
                     }
                     String name = splitted[1];
                     loadGame(name, "savedGames.txt");
@@ -116,6 +118,7 @@ public class Player implements Runnable {
                     String[] splitted = command.split("\\s+");
                     if (splitted.length != 2) {
                         dos.writeUTF("Please choose which game you want to delete");
+                        continue;
                     }
                     String name = splitted[1];
                     deleteGame(name, "savedGames.txt");
